@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.get("/")
 def hello_world():
     secret = secrets.token_urlsafe(16)
+    print("Secret is: " + secret)
     submit_url = os.environ.get("SERVER_FOO_URL", default="/")
     return render_template("hello.html", secret=secret, submit_url=submit_url)
 
