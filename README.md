@@ -54,3 +54,9 @@ The secret is: ** generated secret **
 ```
 If the **generated secret** in terminal 2 matches with what shows up on the ngrok https link, then that means that the
 secret was successfully passed from the server in terminal 2 to the server in terminal 1.
+
+**Note**: You might have some browser warnings about insecure link when you click on the "Visit APD" button. I'm not sure if
+this will be a problem if both the servers are hosted on https, or if this is some cors issue. But I'm unable to test this,
+since ngrok is allowing only 1 connection per machine on the free version. Looks like this might require a server setup
+with nginx reverse proxy, 2 subdomains and let's encrypt certificates to properly test. Either way, we cannot have that
+error on production, since that will require the user to blindly trust serverFoo and ignore the browser warning.
