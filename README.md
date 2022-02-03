@@ -17,6 +17,10 @@ chmod +x serverBar/run.sh
 mkdir env
 cd env
 python3 -m venv .
+cd ..
+source env/bin/activate
+pip install -r requirements.txt
+deactivate
 ```
 
 ## Running the project
